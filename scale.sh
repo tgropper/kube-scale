@@ -12,4 +12,4 @@ curl -X PATCH -v -d '[{"op":"replace","path":"/spec/replicas","value":'"$REPLICA
   --cacert /var/run/secrets/kubernetes.io/serviceaccount/ca.crt \
   -H "Authorization: Bearer $(cat /var/run/secrets/kubernetes.io/serviceaccount/token)" \
   -H "Content-Type: application/json-patch+json" \
-  https://kubernetes.default.svc:/apis/extensions/v1beta1/namespaces/$NAMESPACE/deployments/$DEPLOYMENT_NAME/scale
+  https://kubernetes.default.svc/apis/extensions/v1beta1/namespaces/$NAMESPACE/deployments/$DEPLOYMENT_NAME/scale
