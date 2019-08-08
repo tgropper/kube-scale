@@ -39,7 +39,7 @@ subjects:
 apiVersion: batch/v2alpha1
 kind: CronJob
 metadata:
-  name: {{ .DEPLOYMENT_NAME }}-autoscale
+  name: {{ .DEPLOYMENT_NAME }}-autoscale-{{ lower (randAlphaNum 4) }}
   labels:
     app: {{ .DEPLOYMENT_NAME }}-autoscale
     role: cron
